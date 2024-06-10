@@ -1,8 +1,8 @@
-# Laboratório 01 - Instalação das ferramentas de desenvolvimento - Ubuntu 20.04
+# Laboratório 01 - Instalação das ferramentas de desenvolvimento - Ubuntu 22.04
 
 ## 1 - Objetivos
 
-Configurar o Ubuntu 20.04 no Windows Subsystem for Linux 2 (WSL2) como sistema
+Configurar o Ubuntu 22.04 no Windows Subsystem for Linux 2 (WSL2) como sistema
 para desenvolvimento de firmware para microcontroladores da família STM32.
 Nesta aula iremos instalar
 
@@ -14,7 +14,7 @@ Nesta aula iremos instalar
 
 ## 2 - Pré-requisitos
 
-* Ubuntu 20.04;
+* Ubuntu 22.04;
 * Conhecimento básico da utilização de sistemas Linux;
 * ST-LINK *in-circuit debugger and programmer*.
 
@@ -176,7 +176,7 @@ Para compilar a partir de um repositório GIT também precisamos dos pacotes:
 * automake >= 1.14;
 * texinfo >= 5.0.
 
-Gravadores que utilizam a intergace USB também dependem da
+Gravadores que utilizam a interface USB também dependem da
 
 * libusb-1.0.
 
