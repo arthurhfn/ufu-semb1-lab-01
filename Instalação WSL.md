@@ -1,18 +1,18 @@
-#  Laboratório 01 - Instalação do Ubuntu 20.04 no Windows Subsystem for Linux 2 (WSL2)
+#  Laboratório 01 - Instalação do Ubuntu 22.04 no Windows Subsystem for Linux 2 (WSL2)
 
 ## 1 - Objetivos
 
 
-Instalar e configurar o Ubuntu 20.04 no Windows Subsystem for Linux 2 (WSL2).
+Instalar e configurar o Ubuntu 22.04 no Windows Subsystem for Linux 2 (WSL2).
 
 * Windows Subsystem for Linux 2;
 
 ## 2 - Pré-requisitos
 
-* Windows 10 versão 2004 ou superior;
+* Windows 10 versão 20.04 ou superior;
 * Conhecimento básico da utilização de sistemas Linux;
 
-Este documento assume que você esteja utilizando o Windows 10 versão 2004 ou
+Este documento assume que você esteja utilizando o Windows 10 versão 20.04 ou
 superior (Build 19041 ou superior) ou o Windows 11. Caso esteja utilizando uma
 versão mais antiga do Windows 10 é recomendavél que você faça a atualização.
 Caso não seja possível você ainda poderá instalar o WSL, consulte a referência
@@ -30,7 +30,7 @@ Caso não seja possível você ainda poderá instalar o WSL, consulte a referên
 
 ## 4 - Instalação do WSL
 
-Para o Windows 10 versão 2004 e superiores o processo de instalação do WSL é
+Para o Windows 10 versão 20.04 e superiores o processo de instalação do WSL é
 realizado de forma automática. Para isso, abra o *Windows PowerShell* como
 administrador.
 
@@ -47,11 +47,11 @@ PS > wsl --list --online
 ![Windows PowerShell](./images/ps-distros.jpg "Windows PowerShell")
 
 Em seguida, instale a distribuição desejada usando **wsl --install -d <Distro>**.
-Neste curso será utilizada a distribuição **Ubuntu 20.04 LTS**. Caso opte por
+Neste curso será utilizada a distribuição **Ubuntu 22.04 LTS**. Caso opte por
 uma distribuição diferente será necessário adaptar as instruções fornecidas.
 
 ```console
-PS > wsl --install -d Ubuntu-20.04
+PS > wsl --install -d Ubuntu-22.04
 ```
 Quando a instalação terminar será solicitado que você escolha um nome de
 usuário e uma senha para este usuário. ATENÇÃO, **não será mostrado **
@@ -100,7 +100,7 @@ arquivos pessoais no Linux. Geralmente o diretório *home* possui o caminho
 utilizando o comando **pwd**.
 
 O comando **mkdir** (*Make Directory*) é utilizado para criar novos diretórios.
-Os comando acima criaram os diretórios ***/home/usuario/Downloads*** e 
+Os comandos acima criaram os diretórios ***/home/usuario/Downloads*** e 
 ***/home/usuario/semb1-workspace***. Utilizaremos o diretório Downloads para
 salvar arquivos e programas baixados da internet e o diretório semb1-workspace
 para nossas atividades de laboratório.
@@ -118,7 +118,7 @@ tecla **ENTER** você terá acesso ao sistema de arquivos do Linux.
 
 ![Ubuntu terminal](./images/windows-wsl-mount.jpg "Ubuntu terminal")
 
-## 5. Configuração do WSL2 para utilização de dispositivos USB
+## 6. Configuração do WSL2 para utilização de dispositivos USB
 
 O *Windows Subsytem for Linux* permite que desenvolvedores Windows executem
 binários e *scripts* em Linux diretamente no Windows. Entretanto, a ausência
@@ -134,7 +134,7 @@ permitindo que todo o ciclo de desenvolvimento de um sistema embarcado seja
 realizado diretamente do WSL. As seções seguintes mostram como utilizar o WSL
 para gravar um *firmware* no kit de desenvolvimento *STM32F411 Blackpill*.
 
-### 5.1. Instalação do USBIP no WSL2
+### 6.1. Instalação do USBIP no WSL2
 
 O suporte à dispositivos USB não é nativo no WSL, é utilizado um sistema de
 compartilhamento de dispositivos USB através de uma rede IP denominado USB/IP
@@ -200,7 +200,7 @@ Para maiores informações sobre a ferramenta **update-alternatives**
 foo@bar$ man update-alternatives
 ```
 
-## 6 - Conectar o gravador ST-LINK no WSL2
+## 7 - Conectar o gravador ST-LINK no WSL2
 
 Antes de conectar o gravador **ST-LINK** na USB certifique-se que o terminal
 do Ubuntu está aberto e que o serviço *udev* está rodando.
